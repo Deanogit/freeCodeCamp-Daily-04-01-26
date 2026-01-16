@@ -12,11 +12,11 @@ function isLeapYear(year) {
 
   // the year is divisible by 4
   return (
-    year % 4 === 0 &&
+    year % 400 === 0 ||
     // the year is not divisible by 100,
-    year % 100 !== 0 &&
-    // unless the year is divisible by 400
-    year % 400 === 0
+    (year % 100 !== 0 &&
+      // unless the year is divisible by 400
+      year % 4 === 0)
   );
 
   // return year;
